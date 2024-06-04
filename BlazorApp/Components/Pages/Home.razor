@@ -1,0 +1,16 @@
+﻿@page "/"
+@rendermode InteractiveServer
+<PageTitle>Home</PageTitle>
+
+<h1>Hello, world!</h1>
+<input @bind="InputValue" />
+<button type="button" @onclick="BindInput">Click test</button>
+Welcome to your new app.
+
+@code{
+    public string InputValue {get;set;}="Test";
+
+    public void BindInput(){
+        InputValue="BindInput Click";
+    }
+}
